@@ -1,6 +1,6 @@
 ---
 title: "linear model from Web"
-author: "Your Name"
+author: "Bella Verdin"
 date: "Put semester and year"
 output:
    html_document:
@@ -32,6 +32,11 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 ```
 
 ## Model 1 SIM~ARMS
+
+
+#results
+
+
 
 ### scatterplot
 
