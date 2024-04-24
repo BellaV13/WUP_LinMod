@@ -1,12 +1,14 @@
 ---
 title: "linear model from Web"
 author: "Bella Verdin"
-date: "Sring 2024"
+date: "Spring 2024"
 output:
+   pdf_document :
+     toc: true
+     toc: '5'
    html_document:
          toc: true
          toc_depth: 5
-        
 ---
 
 ```{r setup, include=FALSE}
@@ -31,6 +33,18 @@ data <- read.csv(file="https://onlinestatbook.com/case_studies_rvls/physical_str
 
 ```
 
+#Introduction
+We will produce three equation models to get 
+1. sim score based on arm strength 
+2. sim score based on grip strength 
+3. sim score based on arm and grip strength
+
+For each model we will predict sims for arm=88,grip=94
+
+#Method 
+We have numerical response (sims score) and numerical explanatory variables (arm and grip strength)
+
+So we use the Numerical-Num helper file 
 ## Model 1 SIM~ARMS
 
 
