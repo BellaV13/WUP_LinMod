@@ -110,6 +110,12 @@ This shows a correlation between sims score and grip. 1 being a strong correlati
 
 ### Inferential  (Build model.2)
   
+```{r}
+model.2 <- lm(SIMS~GRIP,data=data)
+summary.lm(model.2)
+```
+
+The p-value for the coefficient of arm is shown smaller than .05. Which means that the coefficient is highly significant. 
 
 #### predict model.2 at target point
 
