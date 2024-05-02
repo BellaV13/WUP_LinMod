@@ -3,9 +3,6 @@ title: "linear model from Web"
 author: "Bella Verdin"
 date: "Spring 2024"
 output:
-   pdf_document :
-     toc: true
-     toc: '5'
    html_document:
          toc: true
          toc_depth: 5
@@ -59,22 +56,57 @@ the graph shows a positive relationship between SIMS and ARM. For it to be a pos
 
 ### Numerical results
 
+```{r}
+cor(SIMS~ARM,data=data)
+```
+
+The degree of correlation between arm strength and sims score. a strong correlation is 1 and a weak correlation would be 0. 
 
 ### Inferential  (Build model.1)
 
+```{r}
+model.1 <- lm(SIMS~ARM,data=data)
+summary.lm(model.1)
+```
+
+The p-value for the coefficient of arm is smaller than .05. that would mean that the coefficient is highly significant. 
+
+
 #### Predict at target point
 
+```{r}
+SIMSpredict= predict.lm(model.1, newdata= data.frame(ARM=88,GRIP=94), interval = "confidence") 
+print(SIMSpredict)
+```
+
+The prediction for ARM= 88, GRIP=94 is 0.71.
 
 #### scatterplot with model fit
-  
+
+```{r}
+plot(SIMS~ARM,data=data)
+abline(model.1, col="red")
+```
+
+This is a scatter plot with a function on it. for ARM strength at 88 the 95 percent confidence interval should be between .48 and .92.
 
 ## Model 2 SIM~GRIP
 
 ### Now add in scatterplot
 
+```{r}
+plot(SIMS~GRIP,data=data)
+```
+
+it shows a positive relationship between SIMS and ARM. they would have to be in a straight line for it to be a perfect linear relationship. 
 
 ### Numerical results 
 
+```{r}
+cor(SIMS~GRIP,data=data)
+```
+
+This shows a correlation between sims score and grip. 1 being a strong correlation and 0 being weak
 
 ### Inferential  (Build model.2)
   
