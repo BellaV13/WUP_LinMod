@@ -166,11 +166,22 @@ There is a 95% confidence interval which is SIMS and its between -2.13 and 2.43 
 
 ### Model.1 vs Model.3
 
+```{r}
+anova(model.1,model.3)
+```
 
-
+the p-value is 0.00000499, since this is less than 0.05 it concludes that model.3 is a better version than model.1.
 
 
 ### Model.2 vs Model.3
 
+```{r}
+anova(model.2,model.3)
+```
+
+For this on the p-value is 0.00000000149, with is also less than 0.05 so model 2 shows to be better than model 1
+
 ## Informally compare Model.1 with model.2
+
+Since model 3 is better than model 1 and mode 2 is better than model 3, I can come to the conclusion that model 2 is better than model 1 
 
