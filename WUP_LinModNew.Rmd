@@ -55,6 +55,7 @@ So we use the Numerical-Num helper file
 plot(SIMS~ARM,data=data)
 ```
 
+the graph shows a positive relationship between SIMS and ARM. For it to be a positive linear relationship then all of the plots would be in a straight line, and the correlation could be around 0.8.
 
 ### Numerical results
 
