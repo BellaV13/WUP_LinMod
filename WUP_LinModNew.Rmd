@@ -142,7 +142,7 @@ This table shows that SIMS correlates with GRIP in a positive way, (0.64) and SI
 plot(data$GRIP, data$ARM)
 ```
   
-This table shows that SIMS correlates with GRIP in a positive way, (0.64) and same with ARM (0.69). These are useful variables. 
+This Plot shows GRI and ARM are not independent. so this isnt a good example or model. 
 
 
 ### Inferential  (Build 2-dimentional model.3)
