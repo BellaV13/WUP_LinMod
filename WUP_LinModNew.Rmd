@@ -147,12 +147,29 @@ This Plot shows GRI and ARM are not independent. so this isnt a good example or 
 
 ### Inferential  (Build 2-dimentional model.3)
 
-#### predict model.3 at target point
-  
+```{r}
+model.3 = lm(SIMS~GRIP+ARM, data = data)
+print(summary(model.3))
+```
 
+
+#### predict model.3 at target point
+
+```{r}
+newPoint = data.frame(GRIP = 94, ARM = 88)
+predict.lm(model.3, newPoint, interval = 'prediction' )
+```
+
+There is a 95% confidence interval which is SIMS and its between -2.13 and 2.43 since this interval has a 0, there is not a good prediction for SIMS. 
+  
 ## Comparing nested models ANOVA Test
 
 ### Model.1 vs Model.3
+
+
+
+
+
 ### Model.2 vs Model.3
 
 ## Informally compare Model.1 with model.2
