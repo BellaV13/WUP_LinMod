@@ -119,15 +119,24 @@ The p-value for the coefficient of arm is shown smaller than .05. Which means th
 
 #### predict model.2 at target point
 
+```{r}
+SIMSpredict= predict.lm(model.2, newdata= data.frame(ARM=88,GRIP=94), interval = "confidence") 
+print(SIMSpredict)
+```
+
+
 #### now add the model fit to our plot for model.2
   
-
-
 ## Model 3 SIM~ARM+GRIP
 
 ### Numerical results (cor)
 
-`
+```{r}
+m = data.frame(data['GRIP'],data['ARM'],data['SIMS'])
+cor(m)
+```
+
+
   
 ### Inferential  (Build 2-dimentional model.3)
 
