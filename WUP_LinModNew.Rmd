@@ -49,12 +49,11 @@ So we use the Numerical-Num helper file
 
 ## Model 1 SIM~ARMS
 
-
-
-
-
 ### scatterplot
 
+```{r}
+plot(SIMS~ARM,data=data)
+```
 
 
 ### Numerical results
